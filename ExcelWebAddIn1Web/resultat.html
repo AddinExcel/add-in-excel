@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache,no-store" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name='mswebdialog-title' content='Connecting to quarksUp' />
+
+    <title>Error</title>
+    <script type='text/javascript'>
+        //<![CDATA[
+        function Errors() { this.reportSubject = 'Error Report'; }
+        //]]>
+    </script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://login.quarksup.net/adfs/portal/css/style.css?id=7014A36D3DD023BAC762450C582C0A97EFF5BFCCDF37FDC0DCBC975E312A0B3D" />
+    <style>
+        .illustrationClass {
+            background-image: url(https://login.quarksup.net/adfs/portal/illustration/illustration.png?id=152BEDF1D674C88BAAB533D092F23CD95353FA841D1C6B05D5B292E0BFB4E6FC);
+        }
+    </style>
+
+</head>
+<body dir="ltr" class="body">
+    <div id="noScript" style="position:static; width:100%; height:100%; z-index:100">
+        <h1>JavaScript required</h1>
+        <p>JavaScript is required. This web browser does not support JavaScript or JavaScript in this web browser is not enabled.</p>
+        <p>To find out if your web browser supports JavaScript or to enable JavaScript, see web browser help.</p>
+    </div>
+    <script type="text/javascript" language="JavaScript">
+        document.getElementById("noScript").style.display = "none";
+    </script>
+    <div id="fullPage">
+        <div id="brandingWrapper" class="float">
+            <div id="branding"></div>
+        </div>
+        <div id="contentWrapper" class="float">
+            <div id="content">
+                <div id="header">
+                    <h4>quarksUp</h4>
+                </div>
+                <main>
+                    <div id="workArea">
+
+                        <div id="authArea" class="groupMargin">
+
+
+                            <div id="errorArea">
+                                <div id="openingMessage" class="groupMargin bigText">
+                                    An error occurred
+                                </div>
+
+                                <div id="errorMessage" class="groupMargin">
+                                    An error occurred. Contact your administrator for more information.
+                                </div>
+                                <div id="authOptions">
+                                    <form id="options" method="post" action="https://login.quarksup.net:443/adfs/oauth2/token?client-request-id=9ed058de-9088-4006-bb18-0080010000cc">
+                                        <script type="text/javascript">
+                                            function SelectOption(option) {
+                                                var w = document.getElementById('waitingWheelDiv');
+                                                if (w) w.style.display = 'inline';
+                                                var i = document.getElementById('optionSelection');
+                                                i.value = option;
+                                                document.forms['options'].submit();
+                                                return false;
+                                            }
+                                        </script>
+                                        <input id="optionSelection" type="hidden" name="AuthMethod" />
+                                        <input id="userNameInputOptionsHolder" name="UserName" value="" type="hidden" />
+
+                                    </form>
+                                </div>
+
+                                <div style="display:none">
+                                    <a class="actionLink" href="#" id="ReportByEmail" onclick="ERR.report(''); return false;"></a>
+                                </div>
+
+                                <a class="actionLink" href="#" id="errorDetailsLink" onclick="ERR.showDetails(); return false;">Error details</a>
+                                <div id="errorDescription" style="display:none">
+                                    <ul id="errorDetails" class="indent block smallText">
+                                        <li id='activityID'>Activity ID: 9ed058de-9088-4006-bb18-0080010000cc</li>
+
+                                        <li>Error details: MSIS7065: There are no registered protocol handlers on path /adfs/oauth2/token to process the incoming request.</li>
+                                        <li>Node name: 2bc21bc2-e36a-42e1-9b13-ff4eaa346579</li>
+                                        <li>Error time: Fri, 15 Jul 2022 09:40:29 GMT</li>
+                                        <li>Proxy server name: qu***-2</li>
+                                        <li hidden>Return status: 500</li>
+                                    </ul>
+
+                                </div>
+
+                                <script type="text/javascript">
+                                    //<![CDATA[
+                                    function ERR() {
+                                    }
+                                    ERR.report = function (email) {
+                                        var errors = new Errors();
+
+                                        var body_message = '';
+                                        var activityID = document.getElementById('activityID').innerText;
+                                        var details = document.getElementById('errorDetails');
+                                        if (details && details.childElementCount > 0) {
+                                            var children = details.childNodes;
+                                            for (var i = 0; i < children.length; i++) {
+                                                if (children[i].innerText && children[i].innerText != '') {
+                                                    body_message = body_message + children[i].innerText + "%0A";
+                                                }
+                                            };
+                                        }
+                                        var mailto_link = 'mailto:' + email + '?subject=' + errors.reportSubject + " " + activityID + '&body=' + body_message;
+                                        window.location = mailto_link;
+                                    }
+                                    ERR.showDetails = function () {
+                                        var node = document.getElementById('errorDescription');
+                                        if (node) {
+                                            node.style.display = (node.style.display == 'none') ? '' : 'none';
+                                        }
+                                    }
+                                    ERR.addDetail = function (text) {
+                                        var detail = document.createElement('li');
+                                        detail.innerText = text;
+                                        return detail;
+                                    }
+                                    ERR.addAgentDetails = function () {
+                                        var node = document.getElementById('errorDetails');
+                                        node.insertAdjacentElement('beforeEnd', ERR.addDetail('Cookie: ' + (navigator.cookieEnabled ? 'enabled' : 'disabled')));
+                                        node.insertAdjacentElement('beforeEnd', ERR.addDetail('User agent string: ' + navigator.userAgent));
+                                    }();
+
+
+                                    //]]>
+                                </script>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+                <div id="footerPlaceholder"></div>
+            </div>
+            <footer id="footer">
+                <div id="footerLinks" class="floatReverse">
+                    <div><span id="copyright">&#169; 2018 Microsoft</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type='text/javascript'>
+        //<![CDATA[
+        // Copyright (c) Microsoft Corporation.  All rights reserved.
+
+        // This file contains several workarounds on inconsistent browser behaviors that administrators may customize.
+        "use strict";
+
+        var pictureCurrentPosition = 0;
+        const MAX_BRANDING_PICTURE_COUNT = 7; // from 0 to x
+
+        // iPhone email friendly keyboard does not include "\" key, use regular keyboard instead.
+        // Note change input type does not work on all versions of all browsers.
+        if (navigator.userAgent.match(/iPhone/i) != null) {
+            var emails = document.querySelectorAll("input[type='email']");
+            if (emails) {
+                for (var i = 0; i < emails.length; i++) {
+                    emails[i].type = 'text';
+                }
+            }
+        }
+
+        // In the CSS file we set the ms-viewport to be consistent with the device dimensions,
+        // which is necessary for correct functionality of immersive IE.
+        // However, for Windows 8 phone we need to reset the ms-viewport's dimension to its original
+        // values (auto), otherwise the viewport dimensions will be wrong for Windows 8 phone.
+        // Windows 8 phone has agent string 'IEMobile 10.0'
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{width:auto!important}"
+                )
+            );
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{height:auto!important}"
+                )
+            );
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+
+        // If the innerWidth is defined, use it as the viewport width.
+        if (window.innerWidth && window.outerWidth && window.innerWidth !== window.outerWidth) {
+            var viewport = document.querySelector("meta[name=viewport]");
+            viewport.setAttribute('content', 'width=' + window.innerWidth + ', initial-scale=1.0, user-scalable=1');
+        }
+
+        // Gets the current style of a specific property for a specific element.
+        function getStyle(element, styleProp) {
+            var propStyle = null;
+
+            if (element && element.currentStyle) {
+                propStyle = element.currentStyle[styleProp];
+            }
+            else if (element && window.getComputedStyle) {
+                propStyle = document.defaultView.getComputedStyle(element, null).getPropertyValue(styleProp);
+            }
+
+            return propStyle;
+        }
+
+        // The script below is used for downloading the illustration image
+        // only when the branding is displaying. This script work together
+        // with the code in PageBase.cs that sets the html inline style
+        // containing the class 'illustrationClass' with the background image.
+        var computeLoadIllustration = function () {
+            var branding = document.getElementById("branding");
+            var brandingDisplay = getStyle(branding, "display");
+            var brandingWrapperDisplay = getStyle(document.getElementById("brandingWrapper"), "display");
+
+            if (brandingDisplay && brandingDisplay !== "none" &&
+                brandingWrapperDisplay && brandingWrapperDisplay !== "none") {
+                var newClass = "illustrationClass";
+
+                if (branding.classList && branding.classList.add)
+                    branding.classList.add(newClass);
+                else if (branding.className !== undefined)
+                    branding.className += " " + newClass;
+
+                if (window.removeEventListener) {
+                    window.removeEventListener('load', computeLoadIllustration, false);
+                    window.removeEventListener('resize', computeLoadIllustration, false);
+                }
+                else if (window.detachEvent) {
+                    window.detachEvent('onload', computeLoadIllustration);
+                    window.detachEvent('onresize', computeLoadIllustration);
+                }
+            }
+
+            injectPictures();
+        };
+
+        if (window.addEventListener) {
+            window.addEventListener('resize', computeLoadIllustration, false);
+            window.addEventListener('load', computeLoadIllustration, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', computeLoadIllustration);
+            window.attachEvent('onload', computeLoadIllustration);
+        }
+
+        (function () {
+            if (document.getElementById('bySelection')) {
+                let redirectUri = getUrlParameter('redirect_uri');
+                let wtrealm = getUrlParameter('wtrealm');
+
+                if ((!wtrealm || wtrealm == '') && (!redirectUri || redirectUri == ''))
+                    document.getElementById('bySelection').innerHTML = '';
+            }
+        })();
+
+        if (typeof Login !== 'undefined' && Login) {
+            var lang = getBrowserLanguage();
+
+            Login.submitLoginRequest = function () {
+                var u = new InputUtil();
+                var e = new LoginErrors();
+
+                var fakeUserName = document.getElementById('fakeUserName');
+                var password = document.getElementById(Login.passwordInput);
+                e.userNameFormatError = 'Enter your user ID in the correct format.';
+
+                switch (lang) {
+                    case 'fr':
+                        e.userNameFormatError = 'Merci de saisir votre identifiant au bon format.';
+                        e.passwordEmpty = 'Merci de saisir votre mot de passe.';
+                        break;
+                }
+
+                if (!fakeUserName.value) {
+                    u.setError(fakeUserName, e.userNameFormatError);
+                    return false;
+                }
+
+                if (!password.value) {
+                    u.setError(password, e.passwordEmpty);
+                    return false;
+                }
+
+                document.forms['loginForm'].UserName.value = fakeUserName.value.replace('@', '||') + '@' + getStoreName(true);
+                document.forms['loginForm'].submit();
+
+                return false;
+            };
+
+            var userName = document.getElementById(Login.userNameInput);
+            if (userName.value) {
+                var domainIndex = userName.value.lastIndexOf('@');
+                if (domainIndex > -1)
+                    userName.value = userName.value.substring(0, domainIndex);
+                userName.value = userName.value.replace('||', '@');
+            }
+
+            // append "fake" username input and hide original in order to amend
+            // login modification render issue
+            var fakeUserName = userName.cloneNode(true);
+            fakeUserName.setAttribute("id", 'fakeUserName');
+            fakeUserName.setAttribute("name", 'fakeUserName');
+            fakeUserName.value = userName.value;
+            document.getElementById('userNameArea').appendChild(fakeUserName);
+
+            userName.style.display = 'none';
+
+            var titleMessage = 'Welcome to quarksUp!';
+            var candidateTitleMessage = 'Welcome!';
+            var loginMessage = 'Sign in';
+            var submitButton = 'Logon';
+            var forgotPassword = 'Forgot your password?';
+            var firstConnexion = 'First connexion?';
+            var userNamePlaceholder = 'Your username';
+            var passwordPlaceholder = 'Your password';
+
+            switch (lang) {
+                case 'fr':
+                    titleMessage = 'Bienvenue sur quarksUp !';
+                    candidateTitleMessage = 'Bonjour et bienvenue !';
+                    loginMessage = 'Heureux de vous revoir, connectez-vous avec votre identifiant et votre mot de passe';
+                    submitButton = 'Se connecter';
+                    forgotPassword = 'Mot de passe oubli&eacute; ?';
+                    firstConnexion = 'Premi&egrave;re connexion ?';
+                    userNamePlaceholder = 'Votre identifiant';
+                    passwordPlaceholder = 'Votre mot de passe';
+                    break;
+            }
+
+            // inserting logo & welcome message
+            var loginAreaElement = document.getElementById('loginArea');
+
+            if (!isPortal('candidate')) {
+                var logoPictureElement = document.createElement('div');
+                logoPictureElement.setAttribute('id', 'logoPicture');
+                loginAreaElement.insertBefore(logoPictureElement, loginAreaElement.firstChild);
+
+                var titleMessageElement = document.createElement('div');
+                titleMessageElement.setAttribute('id', 'titleMessage');
+                titleMessageElement.innerHTML = titleMessage;
+                loginAreaElement.insertBefore(titleMessageElement, document.getElementById('loginMessage'));
+            }
+            else {
+                var titleMessageElement = document.createElement('div');
+                titleMessageElement.setAttribute('id', 'titleMessage');
+                titleMessageElement.innerHTML = candidateTitleMessage;
+                loginAreaElement.insertBefore(titleMessageElement, document.getElementById('loginMessage'));
+            }
+
+            // others elements localization
+            var element = document.getElementById('loginMessage');
+            if (element)
+                element.innerHTML = loginMessage;
+
+            element = document.getElementById('submitButton');
+            if (element)
+                element.innerHTML = submitButton;
+
+            element = document.getElementById('passwordInput');
+            if (element)
+                element.setAttribute('placeholder', passwordPlaceholder);
+
+            fakeUserName.setAttribute('placeholder', userNamePlaceholder);
+
+            // append bottom links
+            var submissionAreaElement = document.getElementById('submissionArea');
+
+            if (!isPortal('candidate')) {
+                var forgottenPasswordLinkElement = document.createElement('a');
+                forgottenPasswordLinkElement.setAttribute('id', 'forgottenPasswordLink');
+                forgottenPasswordLinkElement.setAttribute('href', 'https://passwordrecovery.quarksup.net/?tenant=' + getStoreName(false) + '&loginUrl=' + getRealm());
+                forgottenPasswordLinkElement.innerHTML = forgotPassword;
+                submissionAreaElement.appendChild(forgottenPasswordLinkElement);
+
+                var firstConnexionLinkElement = document.createElement('a');
+                firstConnexionLinkElement.setAttribute('id', 'firstConnexionLink');
+                firstConnexionLinkElement.setAttribute('href', 'https://passwordrecovery.quarksup.net/?tenant=' + getStoreName(false) + '&loginUrl=' + getRealm());
+                firstConnexionLinkElement.innerHTML = firstConnexion;
+                submissionAreaElement.appendChild(firstConnexionLinkElement);
+            }
+            else {
+                var forgottenPasswordLinkElement = document.createElement('a');
+                forgottenPasswordLinkElement.setAttribute('id', 'forgottenPasswordLink');
+                forgottenPasswordLinkElement.setAttribute('href', 'https://passwordrecovery.quarksup.net/?tenant=' + getStoreName(false) + '&loginUrl=' + getRealm());
+                forgottenPasswordLinkElement.setAttribute('style', 'text-align:center;width:100%;display:block;margin-left:15px;');
+                forgottenPasswordLinkElement.innerHTML = forgotPassword;
+                submissionAreaElement.appendChild(forgottenPasswordLinkElement);
+            }
+        }
+
+        if (document.getElementById("hrdArea")) {
+            if (document.getElementById("hrd")) {
+                var idp = document.getElementsByClassName("idp");
+                var listAllSpanForIdpIcon = document.getElementsByClassName("largeIcon float");
+                var listAllSpanForIdpDescription = document.getElementsByClassName("idpDescription float");
+
+                var i;
+                for (i = 0; i < listAllSpanForIdpDescription.length; i++) {
+                    var languageBasedADname = "Active Directory";
+                    if (listAllSpanForIdpDescription[i].innerText == languageBasedADname) {
+                        listAllSpanForIdpIcon[i].alt = "quarksUp";
+                        listAllSpanForIdpDescription[i].innerHTML = "<span class=\"largeTextNoWrap indentNonCollapsible\">" + "quarksUp" + "</span>";
+                        break;
+                    }
+                }
+            }
+        }
+
+
+        function injectPictures() {
+            if (isPortal('candidate')) {
+                document.getElementById('branding').style.backgroundImage = 'url(https://login.quarksup.net/adfs/portal/images/logo_candidate.png)';
+                document.getElementById("brandingWrapper").style.backgroundColor = '#f5f6fa';
+            }
+            else if (!(document.getElementById('header') != undefined && document.getElementById('header').children.length > 0 && document.getElementById('header').children[0].innerText == 'custom_illustration')) {
+                for (var i = 0; i < MAX_BRANDING_PICTURE_COUNT; i++) {
+                    var preloadedImg = document.createElement('div');
+                    preloadedImg.style.backgroundImage = 'url(https://login.quarksup.net/adfs/portal/images/branding/' + i + '.png)';
+                    preloadedImg.style.width = '0px';
+                    preloadedImg.style.height = '0px';
+                    document.getElementById('branding').appendChild(preloadedImg);
+                }
+
+                document.getElementById('branding').style.backgroundImage = 'url(https://login.quarksup.net/adfs/portal/images/branding/' + pictureCurrentPosition + '.png)';
+
+                setInterval(pictureMoveNext, 5000);
+            }
+        }
+
+        function pictureMoveNext() {
+            pictureCurrentPosition++;
+
+            if (pictureCurrentPosition == MAX_BRANDING_PICTURE_COUNT)
+                pictureCurrentPosition = 0;
+
+            var picture = document.getElementById('branding');
+
+            setTimeout(function () {
+                picture.style.transition = 'opacity .5s';
+                picture.style.opacity = 0;
+            }, 500);
+            setTimeout(function () {
+                picture.style.opacity = 1;
+                picture.style.backgroundImage = ''url(https://login.quarksup.net/adfs/portal/images/branding/' + pictureCurrentPosition + '.png)';
+            }, 1000);
+        }
+
+        function getRealm() {
+            if (window.location.protocol == 'file:')
+                return '';
+
+            if (window.location.pathname.startsWith('https://login.quarksup.net/adfs/oauth2/authorize'))
+                return getUrlParameter('redirect_uri');
+            else
+                return getUrlParameter('wtrealm');
+        }
+
+        function isPortal(portalName) {
+            var regex = new RegExp('https?:\/\/([^\.]+?-)?([^\.]+)\..+?\/([^\.\/]+)', 'i');
+            var results = getRealm().match(regex);
+            return results != null && results[2] == portalName;
+        }
+
+        function getStoreName(forDirectory) {
+            if (window.location.protocol == 'file:')
+                return '';
+
+            var store = '';
+
+            var regex = new RegExp('https?:\/\/([^\.]+?-)?([^\.]+)\..+?\/([^\.\/]+)', 'i');
+            var results = getRealm().match(regex);
+            if (results != null && results[2] == 'candidate')
+                store = (results[1] === undefined ? '' : results[1]) + results[3];
+            else {
+                var regex = new RegExp('https?://([^\.]+)\..+?/(.*?(?=/))?', 'i');
+                store = getRealm().match(regex)[1];
+            }
+
+            if (forDirectory) {
+                if (store.indexOf("staging-") > -1)
+                    return store.replace("staging-", "s_");
+                else if (store.indexOf("training-") > -1)
+                    return store.replace("training-", "t_");
+                else if (store.indexOf("demo-") == -1)
+                    return "p_" + store;
+                else
+                    return store;
+            }
+
+            return store;
+        }
+
+        function getUrlParameter(name, parameters) {
+            if (!parameters)
+                parameters = window.location.search.split("?")[1].split("&");
+
+            for (var i = 0; i < parameters.length; i++) {
+                var parameter = parameters[i].split("=");
+                if (parameter[0] == name)
+                    return decodeURIComponent(parameter[1]);
+            }
+
+            return '';
+        }
+
+        function getBrowserLanguage() {
+            var language = 'en';
+
+            if (navigator.userAgent.toLowerCase().indexOf('msie') != -1)
+                language = navigator.browserLanguage;
+            else
+                language = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+
+            if (language.length > 2)
+                language = language.substring(0, 2);
+
+            return language;
+        }
+//]]>
+    </script>
+
+
+</body>
+</html>
+
